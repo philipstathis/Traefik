@@ -37,9 +37,8 @@ entryPoint = "https"
     delayBeforeCheck = "{{delaycheck.stdout}}"
 
 [[acme.domains]]
-  main = "{{domain.stdout}}"
-[[acme.domains]]
   main = "*.{{domain.stdout}}"
+  sans = ["{{domain.stdout}}"]
 
 #[[acme.domains]]
 #  main = "{{domain.stdout}}"
